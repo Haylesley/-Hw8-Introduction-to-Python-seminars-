@@ -65,13 +65,13 @@ def find_by_name(data: list, last_name: str) -> str:
     for el in data:
         if el.get("Фамилия") == last_name:
             return el.get("Телефон")
-    return "Такой абонент отсутвует"
+    return "Такой абонент отсутствует"
 
 def find_by_number(data: list, phone_number: str) -> str:
     for el in data:
         if el.get("Телефон") == phone_number:
             return f'{el.get("Фамилия")}, {el.get("Имя")}'
-    return "Такой абонент отсутвует"
+    return "Такой абонент отсутствует"
 
 def add_user(data: list, user_data: str):
     fields = ["Фамилия", "Имя", "Телефон", "Описание"]
